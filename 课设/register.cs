@@ -12,9 +12,16 @@ namespace 课设
 {
     public partial class register : Form
     {
-        public register()
+        int option = 0; // 判断是哪一个端注册
+        public register(int option)
         {
+            this.option = option;
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

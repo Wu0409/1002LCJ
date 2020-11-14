@@ -130,7 +130,7 @@ namespace 课设
         }
         private void Zhuce_Click(object sender, EventArgs e)  // 按下注册建
         {
-            register register = register();
+            register register = new register(option_list.SelectedIndex);
         }
     }
 }
