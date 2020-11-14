@@ -30,13 +30,13 @@ namespace 课设
         private void InitializeComponent()
         {
             this.title = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.ID = new System.Windows.Forms.Label();
             this.id_shuru = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.Label();
             this.password_shuru = new System.Windows.Forms.TextBox();
             this.Denglu = new System.Windows.Forms.Button();
             this.Zhuce = new System.Windows.Forms.Button();
+            this.option_list = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // title
@@ -49,20 +49,6 @@ namespace 课设
             this.title.TabIndex = 0;
             this.title.Text = "订单管理系统 1.0.0";
             this.title.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 27;
-            this.listBox1.Items.AddRange(new object[] {
-            "用户端",
-            "商家端",
-            "管理端"});
-            this.listBox1.Location = new System.Drawing.Point(63, 80);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(213, 31);
-            this.listBox1.TabIndex = 1;
             // 
             // ID
             // 
@@ -122,20 +108,34 @@ namespace 课设
             this.Zhuce.Text = "注册";
             this.Zhuce.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // option_list
+            // 
+            this.option_list.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.option_list.FormattingEnabled = true;
+            this.option_list.Items.AddRange(new object[] {
+            "用户端",
+            "商家端",
+            "客户端"});
+            this.option_list.Location = new System.Drawing.Point(63, 83);
+            this.option_list.Name = "option_list";
+            this.option_list.Size = new System.Drawing.Size(211, 35);
+            this.option_list.TabIndex = 8;
+            this.option_list.Text = "用户端";
+            // 
+            // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 399);
+            this.Controls.Add(this.option_list);
             this.Controls.Add(this.Zhuce);
             this.Controls.Add(this.Denglu);
             this.Controls.Add(this.password_shuru);
             this.Controls.Add(this.password);
             this.Controls.Add(this.id_shuru);
             this.Controls.Add(this.ID);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.title);
-            this.Name = "Form1";
+            this.Name = "login";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -145,13 +145,13 @@ namespace 课设
         #endregion
 
         private System.Windows.Forms.Label title;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label ID;
         private System.Windows.Forms.TextBox id_shuru;
         private System.Windows.Forms.Label password;
         private System.Windows.Forms.TextBox password_shuru;
         private System.Windows.Forms.Button Denglu;
         private System.Windows.Forms.Button Zhuce;
+        private System.Windows.Forms.ComboBox option_list;
     }
 }
 
