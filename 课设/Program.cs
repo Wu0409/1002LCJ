@@ -7,7 +7,7 @@ using System.Windows.Forms;
 namespace 课设
 {
     /// <summary>
-    ///zyl
+    ///zyl2
     /// </summary>
     static class Program
     {
