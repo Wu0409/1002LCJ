@@ -34,7 +34,21 @@ namespace 课设
             public string gender { get; set; }
         }
 
-        private void Denglu_Click(object sender, EventArgs e)
+        public class merchants  // 名字要对应
+        {
+            [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
+            public string m_id { get; set; }
+            public string m_catalog { get; set; }
+            public string m_name { get; set; }
+            public string m_describe { get; set; }
+            public string m_identity { get; set; }  
+            public string m_password { get; set; }
+            public string m_tel { get; set; }
+            public string m_address { get; set; }
+            public string zfb { get; set; }
+        }
+
+        private void Denglu_Click(object sender, EventArgs e)  // 按下登陆键
         {
             string id = id_shuru.Text;  // 获取用户输入的账号
             int option = option_list.SelectedIndex;  // 用户选择
@@ -50,10 +64,16 @@ namespace 课设
                         InitKeyType = InitKeyType.Attribute //从实体特性中读取主键自增列信息
                     });
 
-                    string correct_password = "";
-
+                    string correct_password = "-1";
+                    try
+                    {
                         var getByWhere = db_login.Queryable<users>().Where(it => it.u_zhanghao == id).ToList();//根据条件查询
                         correct_password = getByWhere[0].u_passwd;
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("输入的账号或密码有误");
+                    }
 
 
                     if (password_shuru.Text == correct_password)  //密码正确
@@ -62,19 +82,55 @@ namespace 课设
                         this.Hide();
                         user.Show();
                     }
-                    else 
+                    break;
+
+                case 1:  // 商家端
+                    SqlSugarClient db_login1 = new SqlSugarClient(new ConnectionConfig()
+                    {
+                        ConnectionString = "server=localhost;uid=root;pwd=12345;database=db",
+                        DbType = SqlSugar.DbType.MySql,//设置数据库类型
+                        IsAutoCloseConnection = true,//自动释放数据务，如果存在事务，在事务结束后释放
+                        InitKeyType = InitKeyType.Attribute //从实体特性中读取主键自增列信息
+                    });
+
+                    string correct_password1 = "-1";
+                    try
+                    {
+                        var getByWhere1 = db_login1.Queryable<merchants>().Where(it => it.m_identity == id).ToList();//根据条件查询
+                        correct_password1 = getByWhere1[0].m_password;
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("输入的账号或密码有误");
+                    }
+
+                    if (password_shuru.Text == correct_password1)  //密码正确
+                    {
+                        Merchant_sys merchant = new Merchant_sys(this);  // 打开用户界面
+                        this.Hide();
+                        merchant.Show();
+                    }
+                    break;
+
+                case 2:  // 管理端
+                    string correct_password2 = "1234567";  // 管理端admin，密码1234567
+
+                    if (password_shuru.Text == correct_password2 && id == "admin")  //密码正确
+                    {
+                        Merchant_sys merchant = new Merchant_sys(this);  // 打开用户界面
+                        this.Hide();
+                        merchant.Show();
+                    }
+                    else
                     {
                         MessageBox.Show("输入的账号或密码有误");
                     }
                     break;
-
-
             }
-            
-            
-
         }
-
-
+        private void Zhuce_Click(object sender, EventArgs e)  // 按下注册建
+        {
+            register register = register();
+        }
     }
 }

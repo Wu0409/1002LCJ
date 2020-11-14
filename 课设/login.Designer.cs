@@ -107,6 +107,7 @@ namespace 课设
             this.Zhuce.TabIndex = 7;
             this.Zhuce.Text = "注册";
             this.Zhuce.UseVisualStyleBackColor = true;
+            this.Zhuce.Click += new System.EventHandler(this.Zhuce_Click);
             // 
             // option_list
             // 

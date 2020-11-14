@@ -98,6 +98,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_sys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_sys.Designer.cs">
+      <DependentUpon>Admin_sys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Merchant_sys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Merchant_sys.Designer.cs">
+      <DependentUpon>Merchant_sys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register.Designer.cs">
+      <DependentUpon>register.cs</DependentUpon>
+    </Compile>
     <Compile Include="User_sys.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,8 +130,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin_sys.resx">
+      <DependentUpon>Admin_sys.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Merchant_sys.resx">
+      <DependentUpon>Merchant_sys.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +148,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="register.resx">
+      <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User_sys.resx">
       <DependentUpon>User_sys.cs</DependentUpon>
     </EmbeddedResource>
