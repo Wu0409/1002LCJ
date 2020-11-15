@@ -76,5 +76,27 @@ namespace 课设
         }
 
 
+                    if (password_shuru.Text == correct_password2 && id == "admin")  //密码正确
+                    {
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("输入的账号或密码有误");
+                    }
+                    break;
+            }
+        }
+        private void Zhuce_Click(object sender, EventArgs e)  // 按下注册建
+        {
+            register register = new register(option_list.SelectedIndex,this);
+            this.Hide();
+            register.Show();
+        }
+
+        private void id_shuru_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

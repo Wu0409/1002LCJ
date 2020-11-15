@@ -43,9 +43,10 @@ namespace 课设
             // 
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.title.Location = new System.Drawing.Point(59, 29);
+            this.title.Location = new System.Drawing.Point(44, 23);
+            this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(219, 31);
+            this.title.Size = new System.Drawing.Size(175, 25);
             this.title.TabIndex = 0;
             this.title.Text = "订单管理系统 1.0.0";
             this.title.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -54,45 +55,51 @@ namespace 课设
             // 
             this.ID.AutoSize = true;
             this.ID.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ID.Location = new System.Drawing.Point(60, 134);
+            this.ID.Location = new System.Drawing.Point(45, 107);
+            this.ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(72, 27);
+            this.ID.Size = new System.Drawing.Size(58, 21);
             this.ID.TabIndex = 2;
             this.ID.Text = "账号：";
             // 
             // id_shuru
             // 
             this.id_shuru.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.id_shuru.Location = new System.Drawing.Point(63, 164);
+            this.id_shuru.Location = new System.Drawing.Point(47, 131);
+            this.id_shuru.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.id_shuru.Name = "id_shuru";
-            this.id_shuru.Size = new System.Drawing.Size(213, 34);
+            this.id_shuru.Size = new System.Drawing.Size(161, 29);
             this.id_shuru.TabIndex = 3;
+            this.id_shuru.TextChanged += new System.EventHandler(this.id_shuru_TextChanged);
             // 
             // password
             // 
             this.password.AutoSize = true;
             this.password.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.password.Location = new System.Drawing.Point(60, 211);
+            this.password.Location = new System.Drawing.Point(45, 169);
+            this.password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(72, 27);
+            this.password.Size = new System.Drawing.Size(58, 21);
             this.password.TabIndex = 4;
             this.password.Text = "密码：";
             // 
             // password_shuru
             // 
             this.password_shuru.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.password_shuru.Location = new System.Drawing.Point(63, 241);
+            this.password_shuru.Location = new System.Drawing.Point(47, 193);
+            this.password_shuru.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.password_shuru.Name = "password_shuru";
-            this.password_shuru.Size = new System.Drawing.Size(213, 34);
+            this.password_shuru.Size = new System.Drawing.Size(161, 29);
             this.password_shuru.TabIndex = 5;
             this.password_shuru.UseSystemPasswordChar = true;
             // 
             // Denglu
             // 
             this.Denglu.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Denglu.Location = new System.Drawing.Point(63, 301);
+            this.Denglu.Location = new System.Drawing.Point(47, 241);
+            this.Denglu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Denglu.Name = "Denglu";
-            this.Denglu.Size = new System.Drawing.Size(85, 35);
+            this.Denglu.Size = new System.Drawing.Size(64, 28);
             this.Denglu.TabIndex = 6;
             this.Denglu.Text = "登录";
             this.Denglu.UseVisualStyleBackColor = true;
@@ -101,9 +108,10 @@ namespace 课设
             // Zhuce
             // 
             this.Zhuce.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Zhuce.Location = new System.Drawing.Point(191, 301);
+            this.Zhuce.Location = new System.Drawing.Point(143, 241);
+            this.Zhuce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Zhuce.Name = "Zhuce";
-            this.Zhuce.Size = new System.Drawing.Size(85, 35);
+            this.Zhuce.Size = new System.Drawing.Size(64, 28);
             this.Zhuce.TabIndex = 7;
             this.Zhuce.Text = "注册";
             this.Zhuce.UseVisualStyleBackColor = true;
@@ -116,17 +124,18 @@ namespace 课设
             "用户端",
             "商家端",
             "客户端"});
-            this.option_list.Location = new System.Drawing.Point(63, 83);
+            this.option_list.Location = new System.Drawing.Point(47, 66);
+            this.option_list.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.option_list.Name = "option_list";
-            this.option_list.Size = new System.Drawing.Size(211, 35);
+            this.option_list.Size = new System.Drawing.Size(159, 29);
             this.option_list.TabIndex = 8;
             this.option_list.Text = "用户端";
             // 
             // login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 399);
+            this.ClientSize = new System.Drawing.Size(251, 319);
             this.Controls.Add(this.option_list);
             this.Controls.Add(this.Zhuce);
             this.Controls.Add(this.Denglu);
@@ -135,6 +144,7 @@ namespace 课设
             this.Controls.Add(this.id_shuru);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.title);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "login";
             this.Text = "Form1";
             this.ResumeLayout(false);
