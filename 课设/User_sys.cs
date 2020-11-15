@@ -97,9 +97,10 @@ namespace 课设
             insertdatagird1(merchants);
         }
 
-        private void 修改账户信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 修改信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            changeuser changeuser = new changeuser(this,user_id);
+            changeuser.Show();
         }
     }
 }

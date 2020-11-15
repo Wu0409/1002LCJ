@@ -56,7 +56,7 @@ namespace 课设
                 .ExecuteCommand();
 
             this.Hide();
-            User_sys user = new User_sys(login_window);
+            User_sys user = new User_sys(login_window,current_id);
             user.Show();
             this.Hide();
 

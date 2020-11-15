@@ -29,7 +29,6 @@ namespace 课设
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -38,16 +37,16 @@ namespace 课设
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button6 = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.用户信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改账户信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button6 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.用户账号ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -117,6 +116,7 @@ namespace 课设
             // dataGridView1
             // 
             this.dataGridView1.AllowDrop = true;
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeight = 25;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -130,16 +130,6 @@ namespace 课设
             this.dataGridView1.Size = new System.Drawing.Size(1607, 671);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(12, 344);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(93, 44);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "所有店铺";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Column1
             // 
@@ -171,34 +161,47 @@ namespace 课设
             this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column3.Width = 600;
             // 
-            // contextMenuStrip1
+            // button6
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.用户信息ToolStripMenuItem,
-            this.修改账户信息ToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            this.button6.Location = new System.Drawing.Point(12, 344);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(93, 44);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "所有店铺";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // 用户信息ToolStripMenuItem
+            // menuStrip1
             // 
-            this.用户信息ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.用户账号ToolStripMenuItem,
             this.退出ToolStripMenuItem});
-            this.用户信息ToolStripMenuItem.Name = "用户信息ToolStripMenuItem";
-            this.用户信息ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.用户信息ToolStripMenuItem.Text = "用户信息";
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1730, 28);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // 修改账户信息ToolStripMenuItem
+            // 用户账号ToolStripMenuItem
             // 
-            this.修改账户信息ToolStripMenuItem.Name = "修改账户信息ToolStripMenuItem";
-            this.修改账户信息ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.修改账户信息ToolStripMenuItem.Text = "修改账户信息";
-            this.修改账户信息ToolStripMenuItem.Click += new System.EventHandler(this.修改账户信息ToolStripMenuItem_Click);
+            this.用户账号ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.修改信息ToolStripMenuItem});
+            this.用户账号ToolStripMenuItem.Name = "用户账号ToolStripMenuItem";
+            this.用户账号ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.用户账号ToolStripMenuItem.Text = "用户账号";
+            // 
+            // 修改信息ToolStripMenuItem
+            // 
+            this.修改信息ToolStripMenuItem.Name = "修改信息ToolStripMenuItem";
+            this.修改信息ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.修改信息ToolStripMenuItem.Text = "修改信息";
+            this.修改信息ToolStripMenuItem.Click += new System.EventHandler(this.修改信息ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.退出ToolStripMenuItem.Text = "退出";
             // 
             // User_sys
@@ -206,6 +209,7 @@ namespace 课设
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1730, 910);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
@@ -214,10 +218,12 @@ namespace 课设
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "User_sys";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,9 +243,9 @@ namespace 课设
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewImageColumn Column3;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 用户信息ToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 用户账号ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 修改信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 修改账户信息ToolStripMenuItem;
     }
 }

@@ -114,6 +114,12 @@
       <DependentUpon>Admin_sys.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBase.cs" />
+    <Compile Include="changeuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeuser.Designer.cs">
+      <DependentUpon>changeuser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Merchant_sys.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_sys.resx">
       <DependentUpon>Admin_sys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeuser.resx">
+      <DependentUpon>changeuser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
