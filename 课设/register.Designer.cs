@@ -44,12 +44,13 @@ namespace 课设
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.yanzheng = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // zhuce
             // 
             this.zhuce.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.zhuce.Location = new System.Drawing.Point(63, 468);
+            this.zhuce.Location = new System.Drawing.Point(63, 489);
             this.zhuce.Name = "zhuce";
             this.zhuce.Size = new System.Drawing.Size(148, 54);
             this.zhuce.TabIndex = 0;
@@ -60,7 +61,7 @@ namespace 课设
             // cancel
             // 
             this.cancel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cancel.Location = new System.Drawing.Point(232, 468);
+            this.cancel.Location = new System.Drawing.Point(232, 489);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(148, 54);
             this.cancel.TabIndex = 1;
@@ -83,16 +84,16 @@ namespace 课设
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(58, 49);
+            this.label1.Location = new System.Drawing.Point(58, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 27);
+            this.label1.Size = new System.Drawing.Size(192, 27);
             this.label1.TabIndex = 3;
-            this.label1.Text = "创建账号名：";
+            this.label1.Text = "创建账号名及类型：";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(63, 92);
+            this.textBox1.Location = new System.Drawing.Point(63, 113);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(317, 34);
             this.textBox1.TabIndex = 4;
@@ -101,7 +102,7 @@ namespace 课设
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(58, 131);
+            this.label2.Location = new System.Drawing.Point(58, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 27);
             this.label2.TabIndex = 5;
@@ -110,7 +111,7 @@ namespace 课设
             // mima1
             // 
             this.mima1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.mima1.Location = new System.Drawing.Point(63, 164);
+            this.mima1.Location = new System.Drawing.Point(63, 185);
             this.mima1.Name = "mima1";
             this.mima1.PasswordChar = '*';
             this.mima1.Size = new System.Drawing.Size(317, 34);
@@ -119,7 +120,7 @@ namespace 课设
             // mima2
             // 
             this.mima2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.mima2.Location = new System.Drawing.Point(63, 235);
+            this.mima2.Location = new System.Drawing.Point(63, 256);
             this.mima2.Name = "mima2";
             this.mima2.PasswordChar = '*';
             this.mima2.Size = new System.Drawing.Size(317, 34);
@@ -129,7 +130,7 @@ namespace 课设
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(58, 202);
+            this.label3.Location = new System.Drawing.Point(58, 223);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 27);
             this.label3.TabIndex = 8;
@@ -138,7 +139,7 @@ namespace 课设
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(63, 315);
+            this.textBox2.Location = new System.Drawing.Point(63, 336);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(317, 34);
             this.textBox2.TabIndex = 9;
@@ -147,7 +148,7 @@ namespace 课设
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(58, 280);
+            this.label4.Location = new System.Drawing.Point(58, 301);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 27);
             this.label4.TabIndex = 10;
@@ -156,7 +157,7 @@ namespace 课设
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(239, 413);
+            this.button1.Location = new System.Drawing.Point(239, 434);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 40);
             this.button1.TabIndex = 11;
@@ -167,7 +168,7 @@ namespace 课设
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox3.Location = new System.Drawing.Point(64, 417);
+            this.textBox3.Location = new System.Drawing.Point(64, 438);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(147, 34);
             this.textBox3.TabIndex = 12;
@@ -175,7 +176,7 @@ namespace 课设
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox4.Location = new System.Drawing.Point(63, 367);
+            this.textBox4.Location = new System.Drawing.Point(63, 388);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(147, 34);
             this.textBox4.TabIndex = 13;
@@ -186,19 +187,33 @@ namespace 课设
             this.yanzheng.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.yanzheng.Font = new System.Drawing.Font("Segoe Print", 13.8F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline) 
                 | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yanzheng.Location = new System.Drawing.Point(264, 364);
+            this.yanzheng.Location = new System.Drawing.Point(264, 385);
             this.yanzheng.Name = "yanzheng";
             this.yanzheng.Size = new System.Drawing.Size(90, 42);
             this.yanzheng.TabIndex = 14;
             this.yanzheng.Text = "1111";
             this.yanzheng.Click += new System.EventHandler(this.yanzheng_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "用户",
+            "商家"});
+            this.comboBox1.Location = new System.Drawing.Point(259, 67);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 35);
+            this.comboBox1.TabIndex = 15;
+            this.comboBox1.Text = "用户";
+            // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(447, 567);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.yanzheng);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -238,5 +253,6 @@ namespace 课设
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label yanzheng;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

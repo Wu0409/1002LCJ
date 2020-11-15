@@ -129,7 +129,7 @@ namespace 课设
                     Match m = Regex.Match(phone_number, pattern);  // 判断是否符合手机号
                     if (m.Success)
                     {
-                        // code = sms.getSMSCode(phone_number);
+                        code = sms.getSMSCode(phone_number);
                         button1.Text = "60s后获取";
                         timeinit();
                         t.Start();
@@ -151,16 +151,16 @@ namespace 课设
         {
             if (textBox1.Text != "" && (mima1.Text != "") && (mima1.Text == mima2.Text))  // textBox3.Text == code
             {
-                switch (option)
+                SqlSugarClient db = new SqlSugarClient(new ConnectionConfig()
+                {
+                    ConnectionString = "server=localhost;uid=root;pwd=12345;database=db",
+                    DbType = SqlSugar.DbType.MySql,//设置数据库类型
+                    IsAutoCloseConnection = true,//自动释放数据务，如果存在事务，在事务结束后释放
+                    InitKeyType = InitKeyType.Attribute //从实体特性中读取主键自增列信息
+                });
+                switch (comboBox1.SelectedIndex)
                 {
                     case 0:
-                        SqlSugarClient db = new SqlSugarClient(new ConnectionConfig()
-                        {
-                            ConnectionString = "server=localhost;uid=root;pwd=12345;database=db",
-                            DbType = SqlSugar.DbType.MySql,//设置数据库类型
-                            IsAutoCloseConnection = true,//自动释放数据务，如果存在事务，在事务结束后释放
-                            InitKeyType = InitKeyType.Attribute //从实体特性中读取主键自增列信息
-                        });
                         var isAny = db.Queryable<users>().Where(it => it.u_zhanghao == textBox1.Text).Any();  //是否存在
                         if (isAny)
                         {
@@ -180,16 +180,54 @@ namespace 课设
 
                             }
 
-                            users add = new users();
-                            add.u_zhanghao = textBox1.Text;
-                            add.u_passwd = mima1.Text;
-                            add.u_name = "你饿吗用户" + create_tmp_name;
-                            add.u_id = create_id;
-                            add.u_tel = textBox2.Text;
-                            db.Insertable(add).ExecuteCommand();
+                            var dc = new Dictionary<string, object>();
+                            dc.Add("u_zhanghao", textBox1.Text);
+                            dc.Add("u_passwd", mima1.Text);
+                            dc.Add("u_name", "你饿吗用户u" + create_tmp_name);
+                            dc.Add("u_id", create_id);
+                            dc.Add("u_tel", textBox2.Text);
+
+                            db.Insertable(dc).AS("users").ExecuteCommand();
+
                             MessageBox.Show("账号注册成功！");
                             this.Hide();
-                            login_window.Show();
+                            register_user register_user = new register_user(login_window,create_id);
+                            register_user.Show();
+                        }
+                        break;
+                    case 1:
+                        var isAny1 = db.Queryable<merchants>().Where(it => it.m_identity == textBox1.Text).Any();  //是否存在
+                        if (isAny1)
+                        {
+                            MessageBox.Show("用户已存在！\n请更换注册账号名");
+                        }
+                        else // 用户不存在，添加至数据库
+                        {
+                            string a = "1234567890";
+                            string create_tmp_name = "";
+                            string create_id = "";
+                            Random random = new Random();
+                            // 获得初始账号和id
+                            for (int i = 0; i < 4; i++)
+                            {
+                                create_tmp_name = create_tmp_name + a.Substring(random.Next(0, a.Length), 1);
+                                create_id = create_id + a.Substring(random.Next(0, a.Length), 1);
+
+                            }
+
+                            var dc = new Dictionary<string, object>();
+                            dc.Add("m_identity", textBox1.Text);
+                            dc.Add("m_password", mima1.Text);
+                            dc.Add("m_name", "你饿吗商家m" + create_tmp_name);
+                            dc.Add("m_id", create_id);
+                            dc.Add("m_tel", textBox2.Text);
+
+                            db.Insertable(dc).AS("merchants").ExecuteCommand();
+
+                            MessageBox.Show("账号注册成功！");
+                            this.Hide();
+                            register_merchant register_merchant = new register_merchant(login_window, create_id);
+                            register_merchant.Show();
                         }
                         break;
                 }

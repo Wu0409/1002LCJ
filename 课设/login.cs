@@ -117,9 +117,9 @@ namespace 课设
 
                     if (password_shuru.Text == correct_password2 && id == "admin")  //密码正确
                     {
-                        Merchant_sys merchant = new Merchant_sys(this);  // 打开用户界面
+                        admin admin = new admin(this);
                         this.Hide();
-                        merchant.Show();
+                        admin.Show();
                     }
                     else
                     {
