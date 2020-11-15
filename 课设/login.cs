@@ -106,7 +106,7 @@ namespace 课设
 
                     if (password_shuru.Text == correct_password1)  //密码正确
                     {
-                        Merchant_sys merchant = new Merchant_sys(this);  // 打开用户界面
+                        Merchant_sys merchant = new Merchant_sys(this, id_shuru.Text);  // 打开用户界面
                         this.Hide();
                         merchant.Show();
                     }
@@ -130,7 +130,9 @@ namespace 课设
         }
         private void Zhuce_Click(object sender, EventArgs e)  // 按下注册建
         {
-            register register = new register(option_list.SelectedIndex);
+            register register = new register(option_list.SelectedIndex,this);
+            this.Hide();
+            register.Show();
         }
     }
 }

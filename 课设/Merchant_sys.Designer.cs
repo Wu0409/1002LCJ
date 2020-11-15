@@ -34,7 +34,7 @@ namespace 课设
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(156, 154);
+            this.button1.Location = new System.Drawing.Point(167, 232);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(335, 117);
             this.button1.TabIndex = 0;

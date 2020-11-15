@@ -12,10 +12,12 @@ namespace 课设
 {
     public partial class Merchant_sys : Form
     {
+        string current_id = "";
         login login_window;
-        public Merchant_sys(login login_window)
+        public Merchant_sys(login login_window,string id)
         {
             this.login_window = login_window;
+            this.current_id = id;
             InitializeComponent();
         }
 
