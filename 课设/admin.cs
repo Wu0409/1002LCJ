@@ -10,20 +10,13 @@ using System.Windows.Forms;
 
 namespace 课设
 {
-    public partial class Merchant_sys : Form
+    public partial class admin : Form
     {
-        string current_id = "";
         login login_window;
-        public Merchant_sys(login login_window,string id)
+        public admin(login loginwindow)
         {
-            this.login_window = login_window;
-            this.current_id = id;
+            this.login_window = loginwindow;
             InitializeComponent();
-        }
-
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            login_window.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -1,7 +1,7 @@
 ﻿
 namespace 课设
 {
-    partial class Merchant_sys
+    partial class admin
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +34,22 @@ namespace 课设
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(167, 232);
+            this.button1.Location = new System.Drawing.Point(289, 277);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(335, 117);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Merchant_sys
+            // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 953);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Name = "Merchant_sys";
-            this.Text = "Merchant_sys";
+            this.Name = "admin";
+            this.Text = "admin";
             this.ResumeLayout(false);
 
         }
