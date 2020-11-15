@@ -78,7 +78,7 @@ namespace 课设
 
                     if (password_shuru.Text == correct_password)  //密码正确
                     {
-                        User_sys user = new User_sys(this);  // 打开用户界面
+                        User_sys user = new User_sys(this,id);  // 打开用户界面
                         this.Hide();
                         user.Show();
                     }
